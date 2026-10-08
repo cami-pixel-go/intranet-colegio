@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Escolar - I.E. Pública</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col md:flex-row">
+
+  <!-- Panel Izquierdo: Acceso -->
+  <div class="w-full md:w-1/3 bg-white p-6 md:p-8 flex flex-col justify-center items-center shadow-md">
+    <div class="w-20 h-20 bg-emerald-600 rounded-full flex items-center justify-center text-white text-3xl font-bold mb-3 shadow-inner">
+      IE
+    </div>
+    <h1 class="text-xl font-bold text-center text-slate-800">I.E. Pública</h1>
+    <p class="text-xs text-slate-500 mb-6 text-center">Portal de Servicios Educativos e Información</p>
+
+    <form class="w-full max-w-sm space-y-4" onsubmit="event.preventDefault(); alert('Bienvenido al Portal Escolar');">
+      <div>
+        <label class="block text-xs font-semibold text-slate-600 mb-1">NÚMERO DE DNI</label>
+        <input type="text" maxlength="8" placeholder="Ingrese el DNI del estudiante" class="w-full border border-slate-300 rounded-lg p-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500" required>
+      </div>
+      <div>
+        <label class="block text-xs font-semibold text-slate-600 mb-1">CONTRASEÑA</label>
+        <input type="password" placeholder="••••••••" class="w-full border border-slate-300 rounded-lg p-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500" required>
+      </div>
+      <button type="submit" class="w-full bg-emerald-600 text-white py-2.5 rounded-lg font-semibold text-sm hover:bg-emerald-700 transition">
+        Ingresar al Portal
+      </button>
+    </form>
+  </div>
+
+  <!-- Panel Derecho: Módulos -->
+  <div class="w-full md:w-2/3 p-6 md:p-10 flex flex-col justify-between">
+    <div>
+      <div class="flex space-x-4 border-b border-slate-300 pb-3 mb-6 font-medium text-sm text-slate-600 overflow-x-auto">
+        <button class="text-emerald-700 border-b-2 border-emerald-700 pb-1 font-bold whitespace-nowrap">Primaria</button>
+        <button class="hover:text-emerald-700 whitespace-nowrap">Secundaria</button>
+        <button class="hover:text-emerald-700 whitespace-nowrap">Padres de Familia</button>
+        <button class="hover:text-emerald-700 whitespace-nowrap">Docentes</button>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        <a href="#" class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 hover:shadow-md flex flex-col items-center justify-center text-center">
+          <div class="text-3xl mb-2">📖</div>
+          <span class="font-semibold text-xs text-slate-700">Fichas y Guías</span>
+        </a>
+        <a href="#" class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 hover:shadow-md flex flex-col items-center justify-center text-center">
+          <div class="text-3xl mb-2">📊</div>
+          <span class="font-semibold text-xs text-slate-700">Boleta de Notas</span>
+        </a>
+        <a href="#" class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 hover:shadow-md flex flex-col items-center justify-center text-center">
+          <div class="text-3xl mb-2">📢</div>
+          <span class="font-semibold text-xs text-slate-700">Comunicados</span>
+        </a>
+        <a href="#" class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 hover:shadow-md flex flex-col items-center justify-center text-center">
+          <div class="text-3xl mb-2">📄</div>
+          <span class="font-semibold text-xs text-slate-700">Mesa de Partes</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
